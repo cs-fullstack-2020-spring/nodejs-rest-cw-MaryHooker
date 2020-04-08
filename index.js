@@ -53,3 +53,33 @@ app.delete('/post/:id', (req, res) => {
     //return deleted blog post
     res.send(jsonBlogPost);
 })
+
+//CHALLENGE****************************************************************
+
+//create an empty array
+let blogPostArray = [
+    {
+        postID: 1,
+        postTitle: "My Planet",
+        postText: "What a wonderful planet it is!",
+    },
+    {
+        postID: 2,
+        postTitle: "My World",
+        postText: "What a wonderful world it is!",
+    },
+    {
+        postID: 3,
+        postTitle: "My Universe",
+        postText: "What a wonderful universe it is!",
+    }
+];
+
+app.get('/post/allPosts',(req,res)=>{
+    let newArray= '';
+    blogPostArray.forEach((post)=>{
+        newArray= newArray + (`PostID: ${post.postID}, Title: ${post.postTitle}, Post: ${post.postText}`);
+    })
+
+    res.send(newArray)
+})
