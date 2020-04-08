@@ -18,8 +18,10 @@ app.listen(port, () => {
 })
 
 //REST CREATE/POST - Create in CRUD
-app.post('/post', (req, res) => {
-    
+app.post('/post/:id', (req, res) => {
+    req.body.status = 'CREATED';
+    //return the created post
+    res.send(req.body)
 })
 
 //REST GET - Read in CRUD
@@ -36,7 +38,8 @@ app.get('/post/:id', (req, res) => {
 
 //REST UPDATE/PUT - update in CRUD
 app.put('/post/:id', (req, res) => {
-    
+    req.body.status = 'UPDATED'
+    res.send(req.body);
 })
 
 //REST DELETE - Delete in CRUD
