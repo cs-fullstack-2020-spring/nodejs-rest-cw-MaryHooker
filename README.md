@@ -1,6 +1,10 @@
 # nodejs-rest-cw
 node.js REST classwork
 
+Nice work and good attempt on the first part of the challenge. I can see your logic since we built a string to display in the browser yesterday but we are sending straight up JSON to postman so no need `newArray` string.
+
+### Score : 5/5
+
 # In your web service
 - Create endpoints using RESTful syntax to support the 4 CRUD operations for a `blogpost` resource
   - The endpoints should accept and/or return JSON user objects with the following properties:
